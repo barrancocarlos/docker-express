@@ -1,0 +1,46 @@
+<!-- Page Content -->
+    <div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron hero-spacer">
+            <h1>Marvel API!</h1>
+            <p>Example app to test docker with an express app that calls the Marvel Api</p>
+
+        </header>
+
+        <hr>
+
+        <!-- Title -->
+        <div class="container tit-bot">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Characters</h3>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="container">
+        <div class="row text-center">
+          {{#if user}}
+          {{#each user.data.results}}
+            <div class="col-md-4 col-sm-12 hero-feature">
+                <div class="thumbnail">
+              <img src="{{thumbnail.path}}.{{thumbnail.extension}}" style="max-height:295px;object-fit: cover;">
+                       <div class="caption">
+                           <h3>{{name}}</h3>
+
+                        </div>
+                </div>
+            </div>
+          {{/each}}
+          {{else}}
+          <h3>You have no projects</h3>
+          {{/if}}
+
+
+        </div>
+
+        </div>
+        <!-- /.row -->
